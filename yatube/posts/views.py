@@ -5,8 +5,21 @@ from django.shortcuts import render
 
 def index(request):
     template = 'posts/index.html'
-    return render(request, template)
+    title = 'Главная страница'
+    text = 'Это главная страница проекта Yatube'
+    context = {
+        'title': title,
+        'text': text
+    }
+    return render(request, template, context)
 
 
-def group_posts(request, any_slug):
-    return HttpResponse(f'Групповые посты {any_slug}')
+def group_posts(request):
+    template = 'posts/group_list.html'
+    text = 'Здесь будет информация о группах проекта Yatube'
+    title = 'Группы'
+    context = {
+        'text': text,
+        'title': title
+    }
+    return render(request, template, context)
