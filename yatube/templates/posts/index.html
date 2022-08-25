@@ -1,14 +1,2 @@
-{% extends 'base.html' %}
-
-{% block title %}
-{{ title }}
-{% endblock %}
-
-{% block content %}
-{{ text }}<br>
-
-<a href="{% url 'post:posts' %}">
-  Посты
-</a>
-
-{% endblock %}
+{% extends "base.html" %}
+{% block title %}Последние обновления на сайте{% endblock %}
